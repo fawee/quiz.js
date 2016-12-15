@@ -1,0 +1,192 @@
+body {
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/background.jpeg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: white;
+    overflow-x: hidden;
+}
+
+.noDisplay {
+    display: none;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.5);
+    max-width: 880px;
+    margin: 50px auto 0 auto;
+    padding: 25px 8px 25px 8px;
+    text-align: center;
+    border-radius: 5px;
+    border: 2px solid white;
+}
+
+#startButton {
+    background-color: #27ae60;
+}
+
+
+/*
+*
+*
+* Quiz Screen
+*
+*
+*/
+
+.card-title {
+    background-color: rgb(239, 71, 58);
+    background-image: linear-gradient(to left, rgb(203, 45, 62), rgb(239, 71, 58));
+    opacity: 0.9;
+    color: white;
+    padding: 10px 0 5px 0;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 5px 5px 0px 0px;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.card-content {
+    text-align: left;
+    margin-left: 10px;
+}
+
+#quizScreenView {
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-top: 0px;
+    min-width: 300px;
+}
+
+#questionTitle {
+    font-size: 24px;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+#questionCounterView {
+    position: absolute;
+    right: 10px;
+    bottom: 25px;
+}
+
+#backToStartBtn {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+}
+
+#backToStartBtn:hover {
+    color: #f1c40f;
+    cursor: pointer;
+}
+
+.noClick {
+    pointer-events: none;
+}
+
+
+/*
+*
+*
+* Result Screen
+*
+*
+*/
+
+#wrongAnswersList li {
+    opacity: 0;
+}
+
+#wrongAnswersList h4 {
+    font-size: 15px;
+}
+
+#wrongAnswersList h4 span {
+    color: #26a69a;
+    font-style: bold;
+}
+
+#wrongAnswersList p span {
+    color: #e74c3c;
+    font-style: bold;
+}
+
+#scoreText {
+    font-size: 20px;
+}
+
+#showWrongAnswersBtn {
+    font-size: 17px;
+    color: #ffd600;
+}
+
+#showWrongAnswersBtn:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#nextButton {
+    background-color: #27ae60;
+}
+
+
+/*
+*
+*
+* Radio Buttons
+*
+*
+*/
+
+label {
+    font-size: 24pt;
+    cursor: pointer;
+    color: white;
+}
+
+label:hover {
+    color: #f1c40f;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.custom-radio span:before {
+    font-family: "FontAwesome";
+    font-style: normal;
+    width: 1em;
+    height: 1em;
+    content: "\f10c";
+    margin-right: .3em;
+    color: white;
+}
+
+.custom-radio input[type="radio"]:checked ~ span:before {
+    content: "\f058";
+    color: #f1c40f;
+}
+
+
+/*
+*
+*
+* RESPONSIVE FONT
+*
+*
+*/
+
+@media only screen and (max-width: 580px) {
+    label {
+        font-size: 22pt;
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    label {
+        font-size: 18pt;
+    }
+}

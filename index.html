@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- META -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Interactive and responsive Quiz">
+    <meta name="keywords" content="Quiz.js, Quiz, Javascript, Interactive, Responsive, Quiz Generator">
+    <meta name="author" content="Fabian Fuchs">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="res/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="res/css/app.css">
+    <title>quiz.js</title>
+</head>
+
+<body>
+    <!-- START SCREEN -->
+    <div id="startScreenView" class="container card">
+        <h1>quiz.js</h1>
+        <p>Let's start!</p>
+        <a id="startButton" class="waves-effect waves-light btn-large">Start</a>
+    </div>
+    <!-- QUIZSCREEN -->
+    <div id="quizScreenView" class="container card noDisplay">
+        <div class="card-title">
+            <h1 id="questionTitle">sd</h1>
+        </div>
+        <div class="card-content">
+            <ul>
+                <li>
+                    <label class="custom-radio">
+                        <input id="option1Value" type="radio" name="options" value="Option A" />
+                        <span id="option1Span" class="radioSpan">Option A</span>
+                    </label>
+                </li>
+                <li>
+                    <label class="custom-radio">
+                        <input id="option2Value" type="radio" name="options" value="Option B" />
+                        <span id="option2Span" class="radioSpan">Option B</span>
+                    </label>
+                </li>
+                <li>
+                    <label class="custom-radio">
+                        <input id="option3Value" type="radio" name="options" value="Option C" />
+                        <span id="option3Span" class="radioSpan">Option C</span>
+                    </label>
+                </li>
+                <li>
+                    <label class="custom-radio">
+                        <input id="option4Value" type="radio" name="options" value="Option D" />
+                        <span id="option4Span" class="radioSpan">Option D</span>
+                    </label>
+                </li>
+            </ul>
+        </div>
+        <div class="card-footer">
+            <a id="nextButton" class="waves-effect waves-light btn-large">Next</a>
+            <span id="questionCounterView"></span>
+        </div>
+    </div>
+    <!-- BACK TO START BUTTON -->
+    <div id="backToStartBtn" class="noDisplay"><i class="fa fa-chevron-left" aria-hidden="true"></i> Main Menu
+    </div>
+    <!-- RESULT SCREEN -->
+    <div id="resultScreenView" class="container card noDisplay">
+        <h1>Your Result:</h1>
+        <p>You got <span id="rightAnswersView"></span> of <span id="numOfQuestionsView"></span> Questions correct!</p>
+        <p id="showWrongAnswersBtn" class="noDisplay"><i class="fa fa-info-circle" aria-hidden="true"></i> Click here to see what was wrong</p>
+        <ul id="wrongAnswersList" class="noDisplay">
+        </ul>
+        <a id="newGameButton" class="waves-effect waves-light btn-large">Start Over!</a>
+    </div>
+    <!-- JAVASCRIPT -->
+    <script src="js/EventPublisher.js"></script>
+    <script src="js/Animator.js"></script>
+    <script src="js/StartScreen.js"></script>
+    <script src="js/QuizScreen.js"></script>
+    <script src="js/ResultScreen.js"></script>
+    <script src="js/Questions.js"></script>
+    <script src="js/Quiz.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+    <script>
+    App.Quiz.init();
+    </script>
+</body>
+
+</html>
